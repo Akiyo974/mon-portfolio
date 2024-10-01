@@ -80,6 +80,22 @@ function Header() {
                     className="w-24 h-24 opacity-30"
                 />
             </div>
+
+            {/* Indication pour défiler vers le bas */}
+            <div className="absolute bottom-20 w-full flex justify-center items-center text-white text-center animate-bounce">
+                <div>
+                    <p className="text-sm">Faites défiler vers le bas</p>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 mx-auto mt-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
         </header>
     );
 }

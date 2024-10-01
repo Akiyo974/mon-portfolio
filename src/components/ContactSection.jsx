@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import satelliteImage from "../assets/satellite.png";
 
 function ContactSection() {
     return (
@@ -49,7 +50,7 @@ function ContactSection() {
             {/* Partie droite: Objet volant */}
             <div className="w-full md:w-1/2 flex items-center justify-center relative">
                 <div className="animate-bounce-slow">
-                    <img src="../src/assets/satellite.png" alt="Objet volant" className="w-23 h-23" />
+                    <img src={satelliteImage} alt="Objet volant" className="w-25 h-25" />
                 </div>
             </div>
         </section>
