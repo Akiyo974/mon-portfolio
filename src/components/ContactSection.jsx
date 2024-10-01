@@ -49,7 +49,7 @@ function ContactSection() {
             {/* Partie droite: Objet volant */}
             <div className="w-full md:w-1/2 flex items-center justify-center relative">
                 <div className="animate-bounce-slow">
-                    <img src="../src/assets/satellite.png" alt="Objet volant" className="w-23 h-23" />
+                    <img src="../assets/satellite.png" alt="Objet volant" className="w-23 h-23" />
                 </div>
             </div>
         </section>
