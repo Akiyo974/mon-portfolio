@@ -1,14 +1,17 @@
 {
   "name": "my-portfolio",
+  "homepage": "https://akiyo974.github.io/mon-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "gsap": "^3.12.5",
     "react": "^18.3.1",
@@ -29,6 +32,7 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "gh-pages": "^5.0.0"
   }
 }
