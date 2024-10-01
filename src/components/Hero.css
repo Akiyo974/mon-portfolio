@@ -1,0 +1,21 @@
+/* Cible la zone de contenu de la section À propos */
+.bg-gray-800::-webkit-scrollbar {
+    width: 8px; /* Largeur de la barre de défilement */
+  }
+  
+  /* Style du track (arrière-plan de la barre de défilement) */
+  .bg-gray-800::-webkit-scrollbar-track {
+    background: #2d2d2d; /* Couleur du fond du track */
+    border-radius: 10px; /* Coins arrondis */
+  }
+  
+  /* Style de la barre de défilement */
+  .bg-gray-800::-webkit-scrollbar-thumb {
+    background: #1db954; /* Couleur de la barre de défilement */
+    border-radius: 10px; /* Coins arrondis */
+  }
+  
+  /* Changement de couleur lors du survol */
+  .bg-gray-800::-webkit-scrollbar-thumb:hover {
+    background: #17a74a; /* Couleur plus sombre au survol */
+  }
