@@ -6,15 +6,17 @@ Bienvenue sur mon portfolio personnel. Ce projet a été conçu pour présenter 
 
 - **React** : Bibliothèque JavaScript utilisée pour créer l'interface utilisateur de manière dynamique.
 - **Vite** : Utilisé pour le bundling rapide et efficace.
-- **CSS** : Pour le stylage de l'application.
+- **CSS (Tailwind CSS)** : Pour le stylage de l'application de manière réactive et modulable.
+- **EmailJS** : Pour l'envoi de messages via le formulaire de contact.
 - **Images** : Diverses illustrations et ressources graphiques (`planete.png`, `satellite.png`, etc.).
 
 ## 🌟 Fonctionnalités
 
 - **Présentation de projets** : Découvrez mes projets récents, mis en avant à travers la section `FeaturedProjects`.
 - **Navigation fluide** : Utilisation de `FloatingNav` pour faciliter la navigation entre les différentes sections.
-- **Section de contact** : Possibilité de me contacter via un formulaire intégré (`ContactSection`).
+- **Section de contact** : Possibilité de me contacter via un formulaire intégré (`ContactSection`). Les messages sont envoyés directement par e-mail en utilisant **EmailJS**.
 - **Animation des technologies** : Animation d'une liste de technologies que j'utilise grâce au composant `InfiniteMovingTechnologies`.
+- **Objet volant animé** : Ajout d'un satellite animé avec des effets de rebond lent dans la section de contact.
 
 ## 📂 Structure du Projet
 
@@ -27,12 +29,11 @@ Bienvenue sur mon portfolio personnel. Ce projet a été conçu pour présenter 
   - `components/` : Composants React réutilisables :
     - **`Header.jsx`** : Composant pour l'en-tête du site.
     - **`Hero.jsx`** : Section d'accueil qui introduit le site.
-    - **`ContactSection.jsx`** : Section permettant de me contacter.
+    - **`ContactSection.jsx`** : Section permettant de me contacter, incluant un formulaire pour envoyer des e-mails via **EmailJS**.
     - **`FloatingNav.jsx`** : Barre de navigation flottante pour une meilleure expérience utilisateur.
-
----
-
-Ce projet a été réalisé par Christen Dijoux.
+    - **`AllProjectsPage.jsx`** : Affiche la liste complète de tous les projets réalisés.
+    - **`FeaturedProjects.jsx`** : Composant qui met en avant une sélection de projets spécifiques.
+    - **`InfiniteMovingTechnologies.jsx`** : Animation continue des logos des technologies que j'utilise.
 
 ## ⚙️ Installation
 
