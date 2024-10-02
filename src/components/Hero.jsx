@@ -14,9 +14,9 @@ function Hero() {
                 </h2>
                 <h3 className="text-xl md:text-2xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-500 font-bold">
                     <Typing
-                        text={["Développeur Front-end", "Passionné d'Open Source", "Créateur d'expériences numériques"]}
+                        text={["Développeur Front-end", "Créateur d'expériences numériques"]}
                         speed={100}
-                        eraseDelay={2000}
+                        eraseDelay={1000}
                         typingDelay={500}
                     />
                 </h3>

@@ -1,37 +1,41 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Importez Link pour la navigation interne
+import akiprojectImage from "../assets/akiproject.png";
+import webanaImage from "../assets/webana.png";
+import akimusicImage from "../assets/akimusic.png";
 
 const projects = [
     {
-        "title": "AkiProject",
-        "description": "Un gestionnaire de tâches combiné à un outil de conversation en temps réel, développé avec Bootstrap, jQuery, et PHP. Le projet inclut la gestion des utilisateurs avec des fonctionnalités comme l'inscription, la connexion, l'envoi de messages, et la gestion basique des tâches. Bien que non finalisé, il est fonctionnel pour les fonctionnalités implémentées.",
-        "technologies": ["HTML", "CSS", "JavaScript", "jQuery", "AJAX", "PHP", "Bootstrap"],
-        "image": "https://via.placeholder.com/600x400",
-        "link": "https://christenalexisdijoux.techniquesmedia.com/cms1/wr/Workspace/index.php",
-        "code": "https://github.com/Akiyo974/akiproject"
-    },   
-    {
-        title: "Webana",
-        description: "Site sur l'histoire des katanas utilisant HTML, CSS, JavaScript, Bootstrap et jQuery.",
-        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"],
-        image: "https://via.placeholder.com/600x400",
-        link: "https://akiyo974.github.io/webana/",
-        code: "https://github.com/Akiyo974/webana",
+        title: "AkiProject",
+        description: "Un gestionnaire de tâches combiné à un outil de conversation en temps réel, développé avec Bootstrap, jQuery, et PHP. Le projet inclut la gestion des utilisateurs avec des fonctionnalités comme l'inscription, la connexion, l'envoi de messages, et la gestion basique des tâches. Bien que non finalisé, il est fonctionnel pour les fonctionnalités implémentées.",
+        technologies: ["HTML", "CSS", "JavaScript", "jQuery", "AJAX", "PHP", "Bootstrap"],
+        image: akiprojectImage,
+        link: "https://christenalexisdijoux.techniquesmedia.com/cms1/wr/Workspace/index.php",
+        code: "https://github.com/Akiyo974/akiproject"
     },
     {
         title: "AkiMusic",
-        description: "Application de streaming musical utilisant PHP, Bootstrap, jQuery, et l'API de Spotify.",
-        technologies: ["PHP", "Bootstrap", "jQuery", "Spotify API"],
-        image: "https://via.placeholder.com/600x400",
-        link: "https://akimusic.example.com",
-        code: "https://github.com/user/akimusic",
+        description: "Page d'accueil d'un site de streaming musical, développée avec PHP, Bootstrap et jQuery, offrant une belle présentation moderne.",
+        technologies: ["PHP", "Bootstrap", "jQuery"],
+        image: akimusicImage,
+        link: "https://christenalexisdijoux.techniquesmedia.com/AkiMusic/index.php#",
+        code: ""
     },
+    {
+        title: "Webana",
+        description: "Refonte du premier site que j'ai créé en intégration multimédia, sur l'histoire des katanas. Ce site utilise HTML, CSS, JavaScript, Bootstrap et jQuery.",
+        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"],
+        image: webanaImage,
+        link: "https://akiyo974.github.io/webana/",
+        code: "https://github.com/Akiyo974/webana"
+    }
 ];
 
 function FeaturedProjects() {
     return (
         <section className="py-16 text-white">
-            <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-                <div className="max-w-md">
+            <div className="max-w-screen-xl mx-auto px-4 md:px-8 text-center">
+                <div className="max-w-md mx-auto">
                     <h1 className="text-violet-500 text-3xl font-extrabold sm:text-4xl">Projets en vedette</h1>
                     <p className="text-gray-400 mt-2">
                         Découvrez quelques-uns des projets sur lesquels j'ai travaillé récemment.
@@ -43,12 +47,12 @@ function FeaturedProjects() {
                     ))}
                 </ul>
                 <div className="mt-12 text-center">
-                    <a
-                        href="/projets"
+                    <Link
+                        to="/projects"
                         className="inline-block py-3 px-6 bg-violet-600 text-white font-medium rounded-lg shadow-md hover:bg-violet-500 hover:shadow-lg transition duration-150"
                     >
                         Voir tous les projets
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
@@ -104,14 +108,16 @@ function ProjectCard({ project }) {
                     >
                         Voir le projet
                     </a>
-                    <a
-                        href={project.code}
-                        className="text-sm text-violet-500 hover:text-violet-400 font-medium"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Code source
-                    </a>
+                    {project.code && (
+                        <a
+                            href={project.code}
+                            className="text-sm text-violet-500 hover:text-violet-400 font-medium"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Code source
+                        </a>
+                    )}
                 </div>
             </div>
         </li>
